@@ -8,6 +8,7 @@ object ProMock {
 
     // device list
     private var keyValues: MutableList<ProMockKeyValue>? = null
+    var isSupportRelease = false
 
     @SuppressLint("HardwareIds")
     fun init(context: Context, vararg devices: ProMockDevice) {
@@ -36,10 +37,14 @@ object ProMock {
      */
     fun get(key: Any, defaultValue: Any? = null): Any? {
 
-        keyValues?.let {
-            for (keyValue in it) {
-                if (keyValue.key == key) {
-                    return keyValue.value
+        // either build should be debug or support flag must be true
+        if (BuildConfig.DEBUG || isSupportRelease) {
+
+            keyValues?.let {
+                for (keyValue in it) {
+                    if (keyValue.key == key) {
+                        return keyValue.value
+                    }
                 }
             }
         }

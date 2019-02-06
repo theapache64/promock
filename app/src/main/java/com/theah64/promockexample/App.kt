@@ -11,7 +11,7 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
 
-        Log.d("X","Current device ID is " + ProMock.getDeviceId(this))
+        Log.d("X", "Current device ID is " + ProMock.getDeviceId(this))
 
         // Creating devices
         val device1 = ProMockDevice("OnePlus6", "8ab6d7ccc06a1703")
@@ -27,12 +27,12 @@ class App : Application() {
 
 
         // Attaching key value to device 1
-        /*device1.addKeyValue(usernameDev1)
-        device1.addKeyValue(passwordDev1)*/
+        device1.addKeyValue(usernameDev1)
+        device1.addKeyValue(passwordDev1)
 
         // Attaching key value to device 2
-        device1.addKeyValue(usernameDev2)
-        device1.addKeyValue(passwordDev2)
+        device2.addKeyValue(usernameDev2)
+        device2.addKeyValue(passwordDev2)
 
 
         // Finally initializing

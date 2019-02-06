@@ -78,8 +78,7 @@
                 android:hint="@string/hint_remember_me"
                 app:layout_constraintEnd_toEndOf="@id/til_password"
                 app:layout_constraintStart_toStartOf="@id/til_password"
-                app:layout_constraintTop_toBottomOf="@id/til_password"
-                app:useMaterialThemeColors="true" />
+                app:layout_constraintTop_toBottomOf="@id/til_password" />
 
             <!--LogIn-->
             <com.google.android.material.button.MaterialButton

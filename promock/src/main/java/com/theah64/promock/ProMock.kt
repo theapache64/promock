@@ -13,7 +13,7 @@ object ProMock {
     fun init(context: Context, vararg devices: ProMockDevice) {
 
         // Getting current device id
-        val currentId = Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID);
+        val currentId = getDeviceId(context)
 
         // looping through each device to get values corresponding to current device
         for (device in devices) {
@@ -24,6 +24,11 @@ object ProMock {
             }
         }
 
+    }
+
+    @SuppressLint("HardwareIds")
+    fun getDeviceId(context: Context): String {
+        return Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID);
     }
 
     /**

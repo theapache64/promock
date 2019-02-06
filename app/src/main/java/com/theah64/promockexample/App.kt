@@ -1,6 +1,7 @@
 package com.theah64.promockexample
 
 import android.app.Application
+import android.util.Log
 import com.theah64.promock.ProMock
 import com.theah64.promock.ProMockDevice
 import com.theah64.promock.ProMockKeyValue
@@ -10,8 +11,10 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
 
+        Log.d("X","Current device ID is " + ProMock.getDeviceId(this))
+
         // Creating devices
-        val device1 = ProMockDevice("OnePlus6", "80930d6c64c0a0f9")
+        val device1 = ProMockDevice("OnePlus6", "8ab6d7ccc06a1703")
         val device2 = ProMockDevice("MotoXStyle", "3f6af0e1ef0d3722")
 
         // Creating values for device 2
@@ -24,12 +27,12 @@ class App : Application() {
 
 
         // Attaching key value to device 1
-        device1.addKeyValue(usernameDev1)
-        device1.addKeyValue(passwordDev1)
+        /*device1.addKeyValue(usernameDev1)
+        device1.addKeyValue(passwordDev1)*/
 
         // Attaching key value to device 2
-        device2.addKeyValue(usernameDev2)
-        device2.addKeyValue(passwordDev2)
+        device1.addKeyValue(usernameDev2)
+        device1.addKeyValue(passwordDev2)
 
 
         // Finally initializing

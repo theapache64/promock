@@ -1,6 +1,6 @@
 # ProMock
 
-Device wise mock data, redefined.
+Per device mock data, redefined.
 
 ### Installation
 

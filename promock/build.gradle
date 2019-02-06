@@ -3,8 +3,8 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
 
 ext {
-    bintrayRepo = 'promock'
-    bintrayName = 'orchid'
+    bintrayRepo = 'maven'
+    bintrayName = 'promock'
 
     publishedGroupId = 'com.theah64.promock'
     libraryName = 'promock'

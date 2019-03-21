@@ -5,7 +5,7 @@ Per device mock data, redefined.
 ### Installation
 
 ```groovy
-implementation 'com:theah64.promock:promock:1.0.0'
+implementation 'com.theah64.promock:promock:1.0.0'
 ```
 
 ### Usage

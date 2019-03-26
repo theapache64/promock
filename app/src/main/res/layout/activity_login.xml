@@ -76,6 +76,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:hint="@string/hint_remember_me"
+                app:buttonTint="@color/colorAccent"
                 app:layout_constraintEnd_toEndOf="@id/til_password"
                 app:layout_constraintStart_toStartOf="@id/til_password"
                 app:layout_constraintTop_toBottomOf="@id/til_password" />
@@ -97,16 +98,5 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
-
-    <!--Progress-->
-    <androidx.core.widget.ContentLoadingProgressBar
-        android:id="@+id/clpb_login"
-        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:indeterminate="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
